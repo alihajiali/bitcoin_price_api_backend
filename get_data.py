@@ -11,7 +11,7 @@ def save_data():
     response = requests.get(url)
     rate = locale.atof(response.json()["bpi"]["USD"]["rate"].replace(",", ""))
     a.add({"rate": rate, "datetime": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")})
-    time.sleep(3)
+    time.sleep(60)
     save_data()
 
 save_data()

@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from pysondb import db
 import datetime
 
-a=db.getDb("./mysite/database.json")
+a=db.getDb("./database.json")
 
 class ShowData(APIView):
     def get(self, requests):
